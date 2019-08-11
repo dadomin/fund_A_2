@@ -1,0 +1,748 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,li {
+	list-style: none;
+	color: #002758;
+}
+
+a {
+	color: #002758;
+	text-decoration: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.dn {
+	display: none;
+}
+
+.db {
+	display: block;
+}
+
+.click {
+	color: #2292d1;
+	font-weight: bold;
+}
+
+.size {
+	width: 1200px;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.line50 {
+	width: 50px;
+	height: 3px;
+	background-color: #2292d1;
+	margin: 12px auto;
+	border: none;
+}
+.line100 {
+	width: 100px;
+	height: 3px;
+	background-color: #2292d1;
+	margin: 20px auto;
+	border: none;
+}
+
+/*헤더 설정*/
+header {
+	width: 100;
+	height: 300px;
+	position: relative;
+	z-index: 100;
+	background-color: #fff;
+	background-image: url("/images/logo-back.png");
+	background-repeat: repeat;
+}
+
+header > .size > a > img {
+	width: 300px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+header > .size > img {
+	width: 250px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+#login-menu {
+	position: absolute;
+	left: 0;
+	bottom: 80px;
+}
+
+#login-menu > li {
+	float: left;
+	margin-right: 15px;
+}
+#login-menu > li > a {
+	color: #2292d1;
+	font-weight: 600;
+}
+.des {
+	font-size: 21px;
+	color: #002758;
+	font-weight: 400;
+	position: absolute;
+	bottom: 40px;
+}
+#menu-bar {
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+	position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 50;
+}
+#menu-bar > li {
+	margin: 0 12px;
+}
+
+/*푸터*/
+footer {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-boxes {
+	width: 100%;
+	height: 250px;
+	background-color: #333;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0 200px;
+}
+.footer-box {
+	flex: 1;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+	text-align: center;
+}
+.footer-under {
+	width: 100%;
+	height: 50px;
+	background-color: #222;
+	font-size: 12px;
+	color: #777;
+	text-align: center;
+	line-height: 50px;
+}
+
+/*메인 - 비쥬얼*/
+#visual {
+	width: 100%;
+	height: 450px;
+	background-color: #fff;
+	margin-bottom: 21px;
+}
+#visual > .size {
+	padding-top: 100px;
+}
+#visual > .size > img {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#visual > .size > p {
+	line-height: 1.7;
+	margin-bottom: 12px;
+	color: #002758;
+	font-size: 18px;
+}
+#visual > .size > h2 {
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #002758;
+	font-size: 54px;
+	margin-bottom: 32px;
+}
+#visual > .size > button {
+	width: 300px;
+	height: 50px;
+	background-color: #002758;
+	color: #fff;
+	border: 2px solid #002758;
+	text-align: center;
+	font-size: 21px;
+	font-weight: 400;
+	border-radius: 12px;
+	cursor: pointer;
+}
+#visual > .size > button:hover {
+	color: #002758;
+	background-color: #fff;
+}
+
+/*메인 - 펀드랭킹*/
+#fund-ranking {
+	width: 100%;
+	height: auto;
+	margin: 20px auto;
+	margin-bottom: 50px;
+}
+.fund-ranking-title {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.fund-ranking-title > h3 {
+	font-weight: 400;
+	font-size: 32px;
+	color: #002758;
+	margin-bottom: 12px;
+}
+.fund-ranking-title > p {
+	font-size: 16px;
+	font-weight: 400;
+	color: #777;
+}
+.ranking-form {
+	width: 1360px;
+	height: 380px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.ranking {
+	width: 300px;
+	height: 100%;
+	margin: 20px auto;
+	background-color: #fff;
+	box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+	border-radius: 7px;
+	padding: 10px 25px;
+	position: relative;
+}
+.ranking > h2 {
+	font-weight: 400;
+	font-size: 24px;
+}
+.ranking > h3 {
+	font-weight: 400;
+	font-size: 20px;
+}
+.ranking > .ranking-div {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+}
+.ranking-div > .ranking-left {
+	float: left;
+	width: 90px;
+	border-right: 1px solid #2292d1;
+	text-align: left;
+}
+.ranking-div > span {
+	float: right;
+}
+.ranking > button {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: none;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	background-color: #2292d1;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/*펀드보기*/
+.lists {
+	width: 100%;
+	height: auto;
+	margin: 50px auto;
+}
+.list-title {
+	width: 100;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.list-title > h3 {
+	color: #002758;
+	font-size: 42px;
+	font-weight: 400;
+}
+.list-middle {
+	width: 100%;
+	margin-bottom: 30px;
+	padding-left: 50px;
+	position: relative;
+}
+.list-middle > h3 {
+	color: #2292d1;
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 7px;
+}
+.list-middle > h3 > span {
+	font-size: 56px;
+	font-weight: 600;
+}
+.list-middle > p {
+	font-size: 18px;
+	color: #002758;
+	font-weight: 400;
+}
+
+.fund-form {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.fund {
+	width: 100%;
+	height: auto;
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+	border-radius: 12px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.fund-title {
+	width: 100%;
+	min-height: 50px;
+	height: auto;
+	position: relative;
+	padding-left: 30px;
+	padding-right: 200px;
+	color: #002758;
+}
+.fund-title > h2 {
+	font-weight: 400;
+}
+.fund-title > h3 {
+	font-weight: 400;
+}
+.fund-status {
+	height: 35px;
+	padding: 0 50px;
+	background-color: #e7e8e9;
+	border: none;
+	border-radius: 21px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	line-height: 35px;
+}
+.fund-middle {
+	width: 100%;
+	height: 250px;
+}
+.fund-middle > canvas {
+	float: left;
+}
+.fund-middle > .fund-notice {
+	width: 800px;
+	float: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+.fund-notice > div {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.fund-notice > div > h3 {
+	color: #002758;
+	font-weight: 400;
+	font-size: 24px;
+}
+.fund-notice > div > p {
+	font-size: 18px;
+	font-weight: 400;
+	color: #555;
+}
+.fund-btns {
+	position: absolute;
+	box-shadow: 30px;
+	right: 50px;
+	bottom: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+.fund-btns > button {
+	height: 35px;
+	padding: 0 30px;
+	border: 1px solid #2292d1;
+	background-color: #fff;
+	color: #2292d1;
+	border-radius: 12px;
+	margin-left: 21px;
+	cursor: pointer;
+}
+
+/*페이지네이션*/
+#pagination-bar {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 30px auto;
+}
+#pagination-bar > li {
+	margin: 0 2px;
+	width: 30px;
+	height: 100%;
+}
+#pagination-bar > li > a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #2292d1;
+	background-color: #fff;
+	border: 1px solid #2292d1;
+	text-align: center;
+	line-height: 30px;
+}
+
+/*투자자목록*/
+#inv {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+	height: 45px;
+	padding-left: 20px;
+	background-color: #fff;
+	color: #2292d1;
+	border: none;
+	border-bottom: 2px solid #2292d1;
+	font-size: 18px;
+	font-weight: 400;
+}
+.investor-form-title {
+	width: 100%;
+	height: 50px;
+	margin: 20px auto;
+	border-bottom: 2px solid #002758;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.investor-form-title > div {
+	flex: 1;
+	color: #002758;
+	text-align: center;
+	line-height: 50px;
+}
+
+.investor-form {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+.investor {
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.investor > div {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.investor > div > canvas {
+	border-radius: 7px;
+	margin-right: 5px;
+}
+
+/*펀드등록*/
+#fund-adapt {
+	width: 100%;
+	height: 1000px;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	background-image: url("/images/background.png");
+	background-position: center;
+	background-size: cover;
+}
+.adapt {
+	width: 500px;
+	height: 800px;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+	padding: 0 50px;
+	position: relative;
+}
+.box-title {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 30px auto;
+}
+.box-title > h3 {
+	color: #002758;
+	font-size: 27px;
+	font-weight: 400;
+}
+.box-title > p {
+	color: #555;
+	font-size: 16px;
+	font-weight: 400;
+}
+.box-notice {
+	width: 100%;
+	height: auto;
+	margin-bottom: 12px;
+}
+.box-notice > p {
+	font-size: 21px;
+	color: #002758;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+.box-notice > input {
+	width: 100%;
+	height: 35px;
+	border: 1px solid #2292d1;
+	border-radius: 7px;
+	background-color: #fff;
+	padding: 0 20px;
+}
+.box-notice > textarea {
+	width: 100%;
+	height: 120px;
+	border: 1px solid #2292d1;
+	border-radius: 7px;
+	background-color: #fff;
+	padding: 20px;
+	resize: none;
+}
+.adapt > button {
+	width: 400px;
+	height: 50px;
+	background-color: #00c1cc;
+	color: #fff;
+	font-weight: 400;
+	font-size: 21px;
+	border: none;
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+/*회원가입*/
+#fund-register {
+	width: 100%;
+	height: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("/images/background.png");
+	background-size: cover;
+	background-position: center;
+}
+.register {
+	width: 500px;
+	height: 550px;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+	padding: 0 50px;
+	position: relative;
+}
+.register > button {
+	width: 400px;
+	height: 50px;
+	background-color: #00c1cc;
+	color: #fff;
+	font-weight: 400;
+	font-size: 21px;
+	border: none;
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+/*반응형*/
+@media (max-width: 480px) {
+	body {
+		width: 480px;
+	}
+
+	.size {
+		width: 440px;
+	}
+
+	header > .size > img {
+		display: none;
+	}
+
+	header > .size > a > img {
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 350px;
+	}
+
+	footer > .footer-boxes {
+		padding: 0 10px;
+	}
+
+	#visual {
+		height: 700px;
+		text-align: center;
+	}
+
+	#visual > .size > img {
+		width: 350px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.ranking-form {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+	}
+	.ranking {
+		height: 380px;
+	}
+
+	.fund {
+		height: 500px;
+	}
+
+	.fund-middle {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.fund-middle > canvas {
+		width: 150px;
+		height: 150px;
+	}
+	
+	.fund-middle > .fund-notice {
+		width: 200px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.fund-notice > div {
+		margin-bottom: 12px;
+	}
+	.fund-btns {
+		width: 100%;
+		right: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.fund-btns > button {
+		padding: 0 50px;
+	}
+
+	.investor-form-title {
+		width: 120px;
+		height: 300px;
+		border-top: 2px solid #002758;
+		flex-direction: column;
+		float: left;
+		margin-right: 20px;
+	}
+	.investor-form {
+		float: left;
+		width: 300px;
+		margin-top: 20px;
+	}
+	.investor {
+		width: 100%;
+		min-height: 300px;
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+	}
+	#fund-adapt {
+		height: 900px;
+	}
+	.adapt {
+		background: none;
+		box-shadow: none;
+	}
+	.box-notice > input {
+		background: none;
+	}
+
+	#fund-register {
+		height: 700px;
+	}
+	.register {
+		background: none;
+		box-shadow: none;
+	}
+}
